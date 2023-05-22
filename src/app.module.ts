@@ -11,7 +11,7 @@ import { UsersModule } from "./users/users.module";
     UsersModule,
     CatsModule,
     AuthModule,
-    // EventsModule,
+    EventsModule,
     EventEmitterModule.forRoot(),
   ],
   controllers: [HealthController],
