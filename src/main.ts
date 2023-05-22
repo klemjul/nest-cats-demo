@@ -23,7 +23,7 @@ async function bootstrap() {
     7. Pipe (CatsModule, BuiltIn ValidationPipe)
     8. Decorators, Guards (AuthModule, AuthGuard, RolesGuard )
     9. Events (EventModule, Observer, Websocket)
-    10. Swagger
+    10. Swagger / open api
 
   */
 
@@ -37,14 +37,14 @@ async function bootstrap() {
 
   app.useGlobalFilters(new HttpExceptionFilter());
 
-  // const config = new DocumentBuilder()
-  //   .setTitle("Cats example")
-  //   .setDescription("The cats API description")
-  //   .setVersion("1.0")
-  //   .addTag("cats")
-  //   .build();
-  // const document = SwaggerModule.createDocument(app, config);
-  // SwaggerModule.setup("api", app, document);
+  const config = new DocumentBuilder()
+    .setTitle("Cats example")
+    .setDescription("The cats API description")
+    .setVersion("1.0")
+    .addTag("cats")
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup("api", app, document);
   // http://localhost:3000/api-json
   // http://localhost:3000/api
 
