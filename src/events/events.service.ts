@@ -22,7 +22,6 @@ export class EventsService {
 
   @OnEvent("cat.created")
   handleCatCreated(newCat: Cat) {
-    console.log(newCat);
     this.catSubscribers.forEach((clientSocket) => {
       clientSocket.emit("cat.created", newCat);
     });

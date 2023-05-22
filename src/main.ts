@@ -33,7 +33,7 @@ async function bootstrap() {
 
   // https://github.com/typestack/class-transformer
   // https://github.com/typestack/class-validator
-  // app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(new ValidationPipe());
 
   app.useGlobalFilters(new HttpExceptionFilter());
 

@@ -30,7 +30,6 @@ export class CatsController {
   @HttpCode(204)
   async delete(@Param("uuid", new ParseUUIDPipe()) uuid: string) {
     const cat = this.catsService.find(uuid);
-    console.log(cat);
     if (!cat) {
       throw new NotFoundException();
     }
@@ -54,6 +53,10 @@ export class CatsController {
     @Param("uuid", new ParseUUIDPipe())
     uuid: string
   ): Promise<Cat> {
-    return this.catsService.find(uuid);
+    const cat = this.catsService.find(uuid);
+    if (!cat) {
+      throw new NotFoundException();
+    }
+    return cat;
   }
 }

@@ -9,10 +9,10 @@ import { UsersModule } from "./users/users.module";
 @Module({
   imports: [
     UsersModule,
-    // CatsModule,
+    CatsModule,
     // AuthModule
     // EventsModule,
-    // EventEmitterModule.forRoot(),
+    EventEmitterModule.forRoot(),
   ],
   controllers: [HealthController],
 })
