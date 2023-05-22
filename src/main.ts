@@ -29,7 +29,7 @@ async function bootstrap() {
 
   app.use(timestampMiddleware);
 
-  // app.useGlobalInterceptors(new LoggingInterceptor());
+  app.useGlobalInterceptors(new LoggingInterceptor());
 
   // https://github.com/typestack/class-transformer
   // https://github.com/typestack/class-validator
