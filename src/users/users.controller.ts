@@ -8,7 +8,7 @@ export class UsersController {
 
   @Get()
   //   @Roles("admin")
-  //   @Render("users")
+  @Render("users")
   getAll() {
     const users = this.usersService.findAll();
     return { users };

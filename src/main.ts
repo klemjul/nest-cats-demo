@@ -48,8 +48,8 @@ async function bootstrap() {
   // http://localhost:3000/api-json
   // http://localhost:3000/api
 
-  // app.setBaseViewsDir(join(__dirname, "..", "views"));
-  // app.setViewEngine("hbs");
+  app.setBaseViewsDir(join(__dirname, "..", "views"));
+  app.setViewEngine("hbs");
 
   await app.listen(3000);
   console.log(`Application is running on: ${await app.getUrl()}`);
