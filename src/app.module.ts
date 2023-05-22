@@ -4,10 +4,11 @@ import { CatsModule } from "./cats/cats.module";
 import { HealthController } from "./core/health.controller";
 import { EventsModule } from "./events/events.module";
 import { EventEmitterModule } from "@nestjs/event-emitter";
+import { UsersModule } from "./users/users.module";
 
 @Module({
   imports: [
-    // UsersModule,
+    UsersModule,
     // CatsModule,
     // AuthModule
     // EventsModule,
