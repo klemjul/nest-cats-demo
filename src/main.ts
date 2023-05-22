@@ -35,7 +35,7 @@ async function bootstrap() {
   // https://github.com/typestack/class-validator
   // app.useGlobalPipes(new ValidationPipe());
 
-  // app.useGlobalFilters(new HttpExceptionFilter());
+  app.useGlobalFilters(new HttpExceptionFilter());
 
   // const config = new DocumentBuilder()
   //   .setTitle("Cats example")
