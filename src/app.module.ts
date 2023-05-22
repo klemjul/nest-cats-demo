@@ -10,7 +10,7 @@ import { UsersModule } from "./users/users.module";
   imports: [
     UsersModule,
     CatsModule,
-    // AuthModule
+    AuthModule,
     // EventsModule,
     EventEmitterModule.forRoot(),
   ],

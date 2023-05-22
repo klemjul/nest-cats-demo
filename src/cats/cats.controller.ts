@@ -17,7 +17,7 @@ import { Cat } from "./cat.interface";
 import { CatsService } from "./cats.service";
 import { EventEmitter2 } from "@nestjs/event-emitter";
 
-// @UseGuards(RolesGuard)
+@UseGuards(RolesGuard)
 @Controller("cats")
 export class CatsController {
   constructor(
@@ -25,7 +25,7 @@ export class CatsController {
     private eventEmitter: EventEmitter2
   ) {}
 
-  // @Roles("admin")
+  @Roles("admin")
   @Delete(":uuid")
   @HttpCode(204)
   async delete(@Param("uuid", new ParseUUIDPipe()) uuid: string) {
