@@ -11,7 +11,11 @@ import { Public } from "src/auth/auth.decorator";
 export class HealthController {
   @Get("ok")
   ok(@Req() request: Request) {
-    return `OK (${request["timestamp"]})`;
+    const requestTs =
+      request["timestamp"] != undefined
+        ? new Date(request["timestamp"]).toISOString()
+        : "unknown request timestamp";
+    return `OK (${requestTs})`;
   }
 
   @Get("ko")

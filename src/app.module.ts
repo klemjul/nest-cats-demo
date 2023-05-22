@@ -13,8 +13,6 @@ import { EventEmitterModule } from "@nestjs/event-emitter";
     // EventsModule,
     // EventEmitterModule.forRoot(),
   ],
-  controllers: [
-    // HealthController
-  ],
+  controllers: [HealthController],
 })
 export class AppModule {}
