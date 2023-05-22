@@ -27,7 +27,7 @@ async function bootstrap() {
 
   */
 
-  // app.use(timestampMiddleware);
+  app.use(timestampMiddleware);
 
   // app.useGlobalInterceptors(new LoggingInterceptor());
 
